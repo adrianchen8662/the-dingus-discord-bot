@@ -20,7 +20,7 @@ COPY requirements-ai-bot.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
-COPY ai-personality-bot.py bot.py
+COPY bot.py bot.py
 
 # Create non-root user for security
 RUN useradd --create-home --shell /bin/bash app \
