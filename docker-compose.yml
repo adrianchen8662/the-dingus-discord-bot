@@ -1,11 +1,11 @@
 version: '3.8'
 
 services:
-  ai-personality-bot:
+  the-dingus-discord-bot:
     build:
       context: .
-      dockerfile: Dockerfile-ai-bot
-    container_name: ai-personality-bot
+      dockerfile: Dockerfile
+    container_name: the-dingus-discord-bot
     restart: unless-stopped
     environment:
       - DISCORD_TOKEN=${DISCORD_TOKEN}
@@ -13,7 +13,7 @@ services:
       - SITE_URL=${SITE_URL}
       - SITE_NAME=${SITE_NAME}
     volumes:
-      - ai-bot-data:/app/data
+      - the-dingus-discord-bot-data:/app/data
     # Resource limits
     deploy:
       resources:
@@ -25,4 +25,4 @@ services:
           cpus: '0.5'
 
 volumes:
-  ai-bot-data:
+  the-dingus-discord-bot-data:
